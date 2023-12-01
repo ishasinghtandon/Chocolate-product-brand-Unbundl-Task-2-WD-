@@ -4,6 +4,7 @@
 	--Black: #303841;
 	--Gray: #777777;
 	--Yellow: #f6c90e;
+	--Purple: #f59eff;
 }
 * {
 	box-sizing: border-box;
@@ -35,7 +36,7 @@ body {
 	left: 50%;
 	border-radius: 100%;
 	transform: translateX(-50%) skewY(-8deg);
-	background-color: #f6c90e;
+	background-color: #f59eff;
 	z-index: -1;
 	/* -webkit-animation: wave 8s ease-in-out infinite alternate; */
 	animation: wave 5s ease-in-out infinite alternate;

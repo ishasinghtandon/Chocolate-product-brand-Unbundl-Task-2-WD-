@@ -41,14 +41,8 @@ body {
 	/* -webkit-animation: wave 8s ease-in-out infinite alternate; */
 	animation: wave 5s ease-in-out infinite alternate;
 }
-@keyframes wave {
-	from {
-		transform: translate(-40%, -5%) skewY(-3deg);
-	}
-	to {
-		transform: translate(-50%, -8%) skewY(-8deg);
-	}
-}
+
+
 .card {
 	background-color: #fff;
 	box-sizing: border-box;
@@ -140,7 +134,7 @@ body {
 }
 .shop-item-button {
 	cursor: pointer;
-	background-color: var(--Yellow);
+	background-color: var(--Purple);
 	font-weight: 700;
 	font-size: 14px;
 	box-sizing: border-box;

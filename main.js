@@ -100,6 +100,13 @@ const updateCart = () => {
 };
 
 const cartNumbers = (products) => {
+   
+    const totalCount = Cart.reduce((acc, item) => acc + item.count, 0);
+
+    if (totalCount + 1 > 8) {
+        alert("You cannot add more than 8 chocolates to your cart.");
+        return;
+    }{
 	if (Cart.some((item) => item.id === products.id)) {
 		return;
 	} else {

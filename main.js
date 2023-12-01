@@ -4,7 +4,7 @@ const cardShoes = document.querySelector(".card"),
 	emptyText = document.querySelector(".cart-empty-text"),
 	saveCart = document.querySelector(".cart-items");
 
-fetch("./data/shoes.json")
+fetch("./Data/choc.json")
 	.then((response) => {
 		return response.json();
 	})

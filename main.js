@@ -97,7 +97,15 @@ const updateCart = () => {
 	totalPrice();
 	localStorage.setItem("cartItems", JSON.stringify(Cart));
 };
-
+const checkTotalChocolates = () => {
+    const totalCount = Cart.reduce((sum, item) => sum + item.count, 0);
+    if (totalCount > 8) {
+        alert("You can't have more than 8 chocolates in the cart.");
+        // Remove the last added item from the cart
+        Cart.pop();
+        updateCart();
+    }
+};
 	const cartNumbers = (products) => {
     // Calculate the total count of items in the cart
     const totalCount = Cart.reduce((acc, item) => acc + item.count, 0);
@@ -114,7 +122,7 @@ const updateCart = () => {
     } else {
         Cart.push({ ...products, count: 1, check: true });
     }
-
+checkTotalChocolates();
     updateCart();
     let smooth = document.querySelectorAll(".cart-item");
     smooth[smooth.length - 1].classList.add("running");

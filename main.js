@@ -3,7 +3,6 @@ const cardShoes = document.querySelector(".card"),
 	items = cardShoes.querySelector(".shop-items"),
 	emptyText = document.querySelector(".cart-empty-text"),
 	saveCart = document.querySelector(".cart-items");
-
 fetch("./Data/choc.json")
 	.then((response) => {
 		return response.json();

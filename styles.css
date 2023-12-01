@@ -62,7 +62,7 @@ body {
 	width: 300px;
 	height: 300px;
 	position: absolute;
-	background-color: var(--Yellow);
+	background-color: var(--Purple);
 	top: -20%;
 	left: -50%;
 	z-index: 0;

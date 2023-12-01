@@ -99,26 +99,31 @@ const updateCart = () => {
 	localStorage.setItem("cartItems", JSON.stringify(Cart));
 };
 
-const cartNumbers = (products) => {
-   
+	const cartNumbers = (products) => {
+    // Calculate the total count of items in the cart
     const totalCount = Cart.reduce((acc, item) => acc + item.count, 0);
 
+    // Check if adding the current product exceeds the limit of 8 items
     if (totalCount + 1 > 8) {
         alert("You cannot add more than 8 chocolates to your cart.");
         return;
-    }{
-	if (Cart.some((item) => item.id === products.id)) {
-		return;
-	} else {
-		Cart.push({ ...products, count: 1, check: true });
-	}
-	updateCart();
-	let smooth = document.querySelectorAll(".cart-item");
-	smooth[smooth.length - 1].classList.add("running");
-	setTimeout(() => {
-		smooth[smooth.length - 1].classList.remove("running");
-	}, 3000);
+    }
+
+    // Check if the product is already in the cart
+    if (Cart.some((item) => item.id === products.id)) {
+        return;
+    } else {
+        Cart.push({ ...products, count: 1, check: true });
+    }
+
+    updateCart();
+    let smooth = document.querySelectorAll(".cart-item");
+    smooth[smooth.length - 1].classList.add("running");
+    setTimeout(() => {
+        smooth[smooth.length - 1].classList.remove("running");
+    }, 3000);
 };
+
 // total price
 const totalPrice = () => {
 	let total = 0;
